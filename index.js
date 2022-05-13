@@ -13,9 +13,9 @@ app.get("/", async (req,res) => {
     res.json({status: "Bark Bark Ready to roll"})
 });
 
-app.get("/stocks", async (req,res) => {
+app.get("/stock", async (req,res) => {
    const query = "SELECT * FROM stock";
-   pool.query(query, [req.params.breed], (error, results) => {
+   pool.query(query, [req.params.stock], (error, results) => {
        if(!results[0]){
            res.json({status: "Not found!!"});
        }else{
