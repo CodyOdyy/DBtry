@@ -24,10 +24,10 @@ app.get("/stock", async (req,res) => {
     });
 
     const pool = mysql.createPool({
-        user: process.env.DB_USER,
-        password: process.env.DB_PASS,
-        database: process.env.DB_NAME,
-        socketPath: '/cloudsql/${process.env.INSTANCE_CONNECTION_NAME}',
+        user: "root",
+        password: "Dilanka123",
+        database: "users",
+        socketPath: '/cloudsql/${ceremonial-team-348412:us-central1:root}',
         insecureAuth : true
 
 })
